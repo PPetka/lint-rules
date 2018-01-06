@@ -2,7 +2,6 @@ package com.vanniktech.lintrules.android
 
 import com.android.tools.lint.checks.infrastructure.TestFiles.xml
 import com.android.tools.lint.checks.infrastructure.TestLintTask.lint
-import com.vanniktech.lintrules.android.SuperfluousMarginDeclarationDetector.ISSUE_SUPERFLUOUS_MARGIN_DECLARATION
 import org.junit.Test
 
 class SuperfluousMarginDeclarationDetectorTest {
@@ -22,6 +21,7 @@ class SuperfluousMarginDeclarationDetectorTest {
           |<TextView
           |^
           |0 errors, 1 warnings""".trimMargin())
+      .expectFixDiffs("""""".trimMargin())
   }
 
   @Test fun androidMarginDifferent() {
